@@ -114,15 +114,15 @@ vector<pair<int, char>> compressLZW(const string& input) {
 }
 
 int main() {
-	setlocale(LC_ALL,"Russian");
+    setlocale(LC_ALL,"Russian");
     string input, tempInput;
     size_t dictionarySize, bufferSize, threshold;
-    cout<<"Ââåäèòå ôðàçó: ";
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ñ€Ð°Ð·Ñƒ: ";
     getline(cin, input);
     tempInput=input;
-    cout<<"Ââåäèòå ðàçìåð ñëîâàðÿ: ";
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ»Ð¾Ð²Ð°Ñ€Ñ: ";
     cin>>dictionarySize;
-    cout<<"Ââåäèòå ðàçìåð áóôåðà: ";
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð±ÑƒÑ„ÐµÑ€Ð°: ";
     cin>>bufferSize;
     cout<<"\nLZ77: ";
     vector<Token> compressedDataLZ77 = compressLZ77(input, dictionarySize, bufferSize);
